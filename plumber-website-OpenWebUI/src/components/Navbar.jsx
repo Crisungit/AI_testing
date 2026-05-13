@@ -8,7 +8,7 @@ function Navbar() {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-   }, []);
+  }, []);
 
   const navLinks = [
     { label: "Etusivu", href: "#etusivu" },
@@ -33,7 +33,7 @@ function Navbar() {
               </a>
             ))}
             <a href="#ota-yhteys" className="nav-cta">
-             Pyydä tarjous
+              Pyydä tarjous
             </a>
           </div>
           <button className="mobile-toggle" onClick={() => setMobileOpen(true)}>
@@ -50,9 +50,9 @@ function Navbar() {
           </button>
           {navLinks.map((link) => (
             <a
-             key={link.label}
-             href={link.href}
-             onClick={() => setMobileOpen(false)}
+              key={link.label}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
             >
               {link.label}
             </a>
